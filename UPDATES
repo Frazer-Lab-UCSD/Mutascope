@@ -1,0 +1,38 @@
+UPDATES:
+
+####   V0.5.6  #######
+First official release of Mutascope!
+
+####   v0.5.7  #######
+Fixed a small bug with the Read-Group-Bias score
+
+####   v1.0.0  #######
+The First FULL release of Mutascope!
+Updates include:
+	- Now works with new BWA indexing
+		 Users can now use any version of BWA
+	- All new QC metrics
+		a) Alignment statistics
+		b) reads per amplicon statistics
+		c) variant plot
+	- Improved running time
+		 The xpileup command implements a new method that reduces the run time from 2 hours to 20 minutes!
+	- new strand specific method
+		 The strand specific information is now taken directly from the BED file
+	- logR ratio for each amplicon
+	- Outputs Somatic, Germline and LOH variants based on the genotypes called
+	- xpileup files are now stored as .gz files to save on hard-drive space
+	- calcErrorRates and callSomatic both take in .xpileup.gz files.
+	- User can now specify to use the Tumor sample's Error rate files.
+	- The default minimum frequency to call a germline variant is now set to 15%
+	- fixed random bugs in the code
+		 Bug fixed when clipping primers from BAM files. Used to only work with reads of length 151 now works with reads of any length
+		 Bug fixed when calculating the fisher-exact p-value
+		 Bug fixed when filtering LOH variants in the VCF file
+		
+####   v1.0.1  ########
+	-fixed bug that was preventing from running multiple instances from the same working directory
+	-corrected various typos
+ 
+####   v1.0.2  ########
+	-REF and ALT allele at multiallelic indels sites are now indicated following the vcf convention.
